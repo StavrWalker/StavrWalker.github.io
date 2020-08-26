@@ -58,6 +58,10 @@ document.addEventListener("keydown", (e) => {
 })
 
 function update() {
+    canvas = document.getElementById("gameField");
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    context = canvas.getContext("2d");
     draw()
     balls.forEach(ball => {ball.updateSelf()})
     requestAnimationFrame(update)
