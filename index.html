@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="leftSection">
+        Left-side bar or smth idk i'm not a frontender.
+        <div class="preferences">
+            <button title="Space" class="pr_button" onclick="createRandomBall()">Add ball</button>
+            <button title="Escape" class="pr_button" onclick="balls.pop()">Pop ball</button>
+            <button class="pr_button" onclick="balls.length=0">Pop all</button>
+        </div>
+    </div>
+
+    <div class="gameFieldWrapper">
+        <canvas id="gameField"  class="gameField">Canvas1</canvas>
+    </div>
+
+<script src="game.js"></script>
+</body>
+</html>

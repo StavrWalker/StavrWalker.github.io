@@ -1,0 +1,47 @@
+* {
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(220px, 20%) 1fr;
+    height: 100%;
+}
+
+.gameField {
+    height: 100vh;
+    width: 80vw;
+    background-color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 200%;
+    color: #3f647e;
+    background-color: #fdf3bf;
+}
+
+.preferences {
+    margin: 1px;
+    padding: 1px;
+}
+
+.pr_button {
+    width: 80%;
+    margin: 3px;
+    padding: 5px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    background-color: #00b0b2;
+    color: #edf3af;
+}
