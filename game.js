@@ -62,20 +62,6 @@ function update() {
     balls.forEach(ball => {
         ball.updateSelf()
     })
-    balls.forEach(ball1 => {
-        balls.forEach(ball2 => {
-            if (ball2 === ball1) {
-                continue
-            }
-            if (dist(ball1.center_x, ball1.center_y,
-                ball2.center_x, ball2.center_y) <= ball1.radius + ball2.radius) {
-                ball1.dx *= -1
-                ball2.dx *= -1
-                ball1.dy *= -1
-                ball2.dy *= -1
-            }
-        })
-    })
     requestAnimationFrame(update)
 }
 
