@@ -33,10 +33,12 @@ body {
 .preferences {
     margin: 1px;
     padding: 1px;
+    display: grid;
+    place-items: center;
 }
 
 .pr_button {
-    width: 80%;
+    width: 75%;
     margin: 3px;
     padding: 5px;
     text-align: center;
