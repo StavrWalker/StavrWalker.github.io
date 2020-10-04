@@ -2,24 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="game.js"></script>
+    <title>Tetris</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="src/tetraminos.js" type="text/javascript"></script>
+    <script defer src="src/renderer.js" type="text/javascript"></script>
+    <script defer src="src/other.js" type="text/javascript"></script>
+    <script defer src="src/records.js" type="text/javascript"></script>
+    <script defer src="main.js" type="text/javascript"></script>
 </head>
 <body>
-
-    <div class="leftSection">
-        Options
-        <div class="preferences">
-            <button title="Space" class="pr_button" onclick="createRandomBall()">Add ball</button>
-            <button title="Escape" class="pr_button" onclick="balls.pop()">Pop ball</button>
-            <button class="pr_button" onclick="balls.length=0">Pop all</button>
-        </div>
+    <div id="stats">
+        Username: <label id="username"></label> <br>
+        Level: <label id="level"></label> <br>
+        Score: <label id="score"></label> <br>
+        
     </div>
 
-    <div class="gameFieldWrapper">
-        <canvas id="gameField"  class="gameField">Canvas1</canvas>
+    <div id="gameFieldWrapper">
+        <span>
+            <canvas id="gameCanvas" width="350" height="600"></canvas>
+            <canvas id="nextCanvas" width="50" height="50"></canvas>
+        </span>
     </div>
 
+    <div id="scoreTableWrapper">
+        <h1>Scores</h1>
+        <table id="scores">
+            <thead>
+            <tr>
+                <th name="username">Username</th>
+                <th name="score">Score</th>
+                <th name="level">Level</th>
+                <th name="date">Date</th>
+                <th name="time">Time</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </body>
 </html>
